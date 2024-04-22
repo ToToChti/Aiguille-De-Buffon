@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PI Day</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="pageTitle">PI Day</div>
+  <div class="pageSubtitle">Approximate the value of PI</div>
+
+  <div class="mainContainer">
+    <div class="canvasContainer">
+      <canvas id="piZone"></canvas>
+      <div class="canvasInfo">
+        <div>Number of vertical bars: <input id="barNumber" type="number" value="10" min="0" max="100"></div>
+        <div>Toothpick size compared to space between bars: <input id="toothpickSize" type="number" value="0.5" min="0.01" max="5" step="0.05"></div>
+        
+      </div>
+    </div>
+
+    <div class="rightBox">
+
+      <div class="infoBox">
+        <div class="boxTitle">Current Try</div>
+        <div class="boxContent">
+          <div class="info placed">
+            <span class="key">Number of toothpick placed: </span>
+            <span class="value">0</span>
+          </div>
+          <div class="info onLine">
+            <span class="key">Number of toothpick on lines: </span>
+            <span class="value">0</span>
+          </div>
+          <div class="info ratio">
+            <span class="key">Proportion of toothpick placed: </span>
+            <span class="value">0</span>
+          </div>
+          <div class="info approx">
+            <span class="key">PI Approximation: </span>
+            <span class="value">20</span>
+          </div>
+
+          <div class="actionsBox">
+            <div>
+              Number of additional toothpick(s): <input type="number" min="1" max="100000" value="100">
+            </div>
+            <button onclick="addToothpicks()">Add toothpicks</button>
+          </div>
+
+          <div class="actionsBox">
+            <button onclick="reset()">Reset</button>
+          </div>
+
+          <div class="actionsBox">
+            <button onclick="saveTry()">Save your try and start a new try</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="infoBox">
+        <div class="boxTitle">Try history</div>
+        <div class="boxContent">
+          <table>
+            <thead>
+              <th>Iteration N°</th>
+              <th>Number of toothpicks</th>
+              <th>PI Approximation</th>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
