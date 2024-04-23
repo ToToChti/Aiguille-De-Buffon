@@ -1,4 +1,4 @@
-# Aiguille-De-Buffon
+# Buffon's Needle
 
 ### Description
 A web simulation tool to approximate the value of PI using toothpicks. This challenge was proposed by JUNIA/ISEN engineering school.
